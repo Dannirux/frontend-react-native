@@ -28,9 +28,6 @@ const ListComponent = () => {
         }
         return (
             <View>
-                <Text>
-                    {i}
-                </Text>
                 <TouchableOpacity style={styles.perItem} key={i} onPress={() => getProfile(task)}>
                     <Task task={task}/>
                 </TouchableOpacity>
@@ -78,16 +75,19 @@ const ListComponent = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "#E8EAED",
-        marginTop: 0,
-        display: "flex"
+        paddingTop: 0,
+        paddingBottom: 20,
+        display: "flex",
+        height: "100%",
     },
     taskWrapper: {
-        paddingTop: 80,
         paddingHorizontal: 20,
-        height: 900
+        height: "88%"
     },
     sectionTitle: {
         fontSize: 24,
+        marginBottom: 20,
+        marginTop: 20,
         fontWeight: "bold",
     },
     items: {

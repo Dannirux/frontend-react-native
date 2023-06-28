@@ -5,6 +5,7 @@ import Menu from "./components/home/Menu";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ListComponent from "./components/list/List";
 import Icon from "react-native-vector-icons/FontAwesome";
+import Users from "./components/Users/Users";
 
 const Tab = createBottomTabNavigator()
 
@@ -19,6 +20,11 @@ const navigation = () => {
           <Tab.Screen name="List" component={ListComponent} options={{
               tabBarLabel: "Listado",
               tabBarIcon: () => <Icon name="twitter"/>
+          }}>
+          </Tab.Screen>
+          <Tab.Screen name="Users" component={Users} options={{
+              tabBarLabel: "Usuarios",
+              tabBarIcon: () => <Icon name="facebook"/>
           }}>
           </Tab.Screen>
       </Tab.Navigator>
