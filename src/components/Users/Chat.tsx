@@ -2,31 +2,23 @@ import React, {useRef, useState} from "react";
 import {View, Text, TextInput, ScrollView, StyleSheet, Alert, Button} from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Configuration, OpenAIApi } from 'openai'
-// OpenIA directo
-/*const apiKey = ''
+const apiKey = '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'
 const configuration = new Configuration({
     apiKey
 })
-const openai = new OpenAIApi(configuration);*/
+const openai = new OpenAIApi(configuration);
 const sendMessage = async (body) => {
     try {
-        const resp = await fetch('https://ae3d-102-177-161-43.ngrok-free.app/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        })
-        return await resp.json()
-        // OpenIa Directo
-       /* const response = await openai.createCompletion({
+        const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `${body.message}`,
             temperature: 0.1,
             max_tokens: 150,
             n: 1,
+        }, {
+            method: "POST"
         })
-        return { reply: response.data.choices[0].text?.trim() }*/
+        return { reply: response?.data?.choices[0]?.text }
     } catch (e) {
         Alert.alert(JSON.stringify(e))
     }
@@ -77,7 +69,11 @@ const ChatComponent = () => {
                     </View>
                 ))}
             </ScrollView>
-
+            <View style={{ display: "flex", flexDirection: 'row', width: '100%'}}>
+                <Text>
+                    Tokens consumidos {messages?.filter(x => x.from === 'bot')?.length}
+                </Text>
+            </View>
             <View style={{ display: "flex", flexDirection: 'row', width: '100%'}}>
                 <TextInput
                     name="message"
