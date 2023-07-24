@@ -7,6 +7,7 @@ import ListComponent from "./components/list/List";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Users from "./components/Users/Users";
 import ChatComponent from "./components/Users/Chat";
+import ChooseFileComponent from "./components/pdfia/ChooseFile";
 
 const Tab = createBottomTabNavigator()
 
@@ -29,7 +30,12 @@ const navigation = () => {
           }}>
           </Tab.Screen>
           <Tab.Screen name="Chats" component={ChatComponent} options={{
-              tabBarLabel: "Chat",
+              tabBarLabel: "OpenIA",
+              tabBarIcon: () => <Icon name="whatsapp"/>
+          }}>
+          </Tab.Screen>
+          <Tab.Screen name="ChatsPDF" component={ChooseFileComponent} options={{
+              tabBarLabel: "PDFIA",
               tabBarIcon: () => <Icon name="whatsapp"/>
           }}>
           </Tab.Screen>
