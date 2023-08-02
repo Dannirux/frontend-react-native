@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react";
 import {View, Text, TextInput, ScrollView, StyleSheet, Alert, Button} from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import {Configuration, CreateCompletionRequest, OpenAIApi} from 'openai'
+import axios from "axios";
 const apiKey = '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'
 const configuration = new Configuration({
     apiKey
@@ -24,7 +25,7 @@ const sendMessage = async (body) => {
     }
 }
 
-const ChatComponent = () => {
+const ChatComponent = (props) => {
     const [messages, setMessages] = useState([])
     const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
@@ -39,7 +40,7 @@ const ChatComponent = () => {
         if (scrollViewRef.current) {
             scrollViewRef.current.scrollToEnd({ animated: true });
         }
-        const response = await sendMessage({ message }) as any
+        const response = props.pdf == true ? await sendQuestion({ message }) : await sendMessage({ message }) as any
         setMessage('')
         const responseMessage = {
             from: 'bot',
@@ -50,6 +51,17 @@ const ChatComponent = () => {
             scrollViewRef.current.scrollToEnd({ animated: true });
         }
         setLoading(false)
+    }
+
+    const sendQuestion = async (body) => {
+        try {
+            const response = await axios.post('https://bb8c-2800-bf0-1cc-2db4-5b85-b93f-1ec4-3206.ngrok-free.app/chat/answer',
+                { answer: body.message })
+            console.log(' response.data.reply',  response.data.reply)
+            return { reply: response.data.reply }
+        } catch (e) {
+            Alert.alert(JSON.stringify(e))
+        }
     }
     return (
         <View style={styles.container}>

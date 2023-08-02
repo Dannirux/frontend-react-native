@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1352a996-f09d-4dcb-a439-e490407fc78a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pdfia/ChooseFile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Chat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pdfia/ChooseFile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdfia/ChooseFile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.ns.project&quot;: &quot;true&quot;,
     &quot;js.ns.project.flavor&quot;: &quot;TypeScript&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dannirux/Documents/UCE/MOVILES/frontend/my-app/src/components/Users&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dannirux/Documents/escupidera/observatory.app&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,7 +80,10 @@
       <workItem from="1687954640988" duration="1166000" />
       <workItem from="1688091367862" duration="15130000" />
       <workItem from="1689782684205" duration="24000" />
-      <workItem from="1690232535595" duration="3896000" />
+      <workItem from="1690232535595" duration="4218000" />
+      <workItem from="1690238369749" duration="43000" />
+      <workItem from="1690948382225" duration="1924000" />
+      <workItem from="1690989707710" duration="12744000" />
     </task>
     <servers />
   </component>

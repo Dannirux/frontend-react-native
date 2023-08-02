@@ -5,6 +5,7 @@ import Menu from "./components/home/Menu";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ListComponent from "./components/list/List";
 import Icon from "react-native-vector-icons/FontAwesome";
+import Icon5 from "react-native-vector-icons/FontAwesome5";
 import Users from "./components/Users/Users";
 import ChatComponent from "./components/Users/Chat";
 import ChooseFileComponent from "./components/pdfia/ChooseFile";
@@ -36,7 +37,7 @@ const navigation = () => {
           </Tab.Screen>
           <Tab.Screen name="ChatsPDF" component={ChooseFileComponent} options={{
               tabBarLabel: "PDFIA",
-              tabBarIcon: () => <Icon name="whatsapp"/>
+              tabBarIcon: () => <Icon5 name="file-pdf"/>
           }}>
           </Tab.Screen>
       </Tab.Navigator>
